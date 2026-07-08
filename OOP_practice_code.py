@@ -1,17 +1,15 @@
-class Plex:
+class Animatronic:
 	my_id = 1
-	def __init__(self, Daycare, Arcade, El_Chips, Rockstar_Row, Security_Office, Tunnels, Auditorium):
-		self.Daycare = Daycare
-		self.Arcade = Arcade
-		self.El_Chips = El_Chips
-		self.Rockstar_Row = Rockstar_Row
-		self.Security_Office = Security_Office
-		self.Tunnels = Tunnels
-		self.Arcade = Arcade
-		self.id = Plex.my_id
+	def __init__(self, name: str, serial_number: int, species: str, location: str, last_maintinence: int):
+		self.name = name
+		self.serial_number = serial_number
+		self.species = species
+		self.location = location
+		self.last_maintinence = last_maintinence
+		self.id = Animatronic.my_code
 	
 	@classmethod
-	def access_area(cls):
-		new_id = cls.my_id
-		cls.my_id += 1
-		return new_id
+	def access_code(cls):
+		new_code = cls.my_code
+		cls.my_code += 1
+		return new_code
